@@ -47,22 +47,42 @@ These are the notes from a meeting with the frontend developer that describe wha
 
 #### Product
 
-- id
-- name
-- price
-- [OPTIONAL] category
+- table name [products]
+  - columns :
+    - [id] SERIAL
+    - [name] VARCHAR
+    - [price] DECIMAL
+    - [category_id] INTEGER
 
 #### User
 
-- id
-- firstName
-- lastName
-- password
+- table name [users]
+  - columns :
+    - [id] SERIAL
+    - [firstName] VARCHAR
+    - [lastName] VARCHAR
+    - [lastName] VARCHAR
 
 #### Orders
 
-- id
-- id of each product in the order
-- quantity of each product in the order
-- user_id
-- status of order (active or complete)
+- table name [catgory]
+- columns :
+  - [id] SERIAL
+  - [status] VARCHAR
+  - [user_id] INTEGER
+
+#### Category
+
+- table name [catgory]
+- columns :
+  - [id] :integer PRIMARY KEY,
+  - [name] :VARCHAR(120)
+
+#### Product Order
+
+- table name [product_order]
+- columns :
+  - [id] SERIAL
+  - [quantity] INTEGER
+  - [product_id] INTEGER
+  - [order_id] INTEGER

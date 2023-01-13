@@ -58,13 +58,39 @@ Before submitting your project, spin it up and test each endpoint. If each one r
 
 ### 6. install and setup
 
-- Install dependencies and run the server : npm install && npm run dev
-- Dataabase setup
-  create 2 databases with the following name store_api_dev and store_api_test other configration options are in the .env.example file
-  then run the migration command to generate the tables : db-migrate up
+#### 1. Install dependencies and run the server
 
-- In order to access Authenticated routes [tokens-requried]
-  - 1 # Create a new user and copy the returned token
-  - 2 # Add the token to the request headers.Authorization
-- Testing
-  - change the EVN environment in the .env.example file variable to run tests : npm run test
+- `npm install && npm run dev`
+
+#### 2. Dataabase setup
+
+- create 2 databases by running
+
+  ```
+  psql -U postgres
+  CREATE DATABASE store_api_dev;
+  CREATE DATABASE store_api_test;
+  CREATE USER admin WITH PASSWORD 'secret';
+  GRANT ALL PRIVILEGES ON DATABASE store_api_dev TO admin;
+  GRANT ALL PRIVILEGES ON DATABASE store_api_test TO admin;
+  ```
+
+- Create an .env file and paste the content of .env.example into it.
+
+  - database name : store_api_dev & store_api_test
+  - user name : admin
+  - host : 127.0.0.1
+  - port : 5432 [postgres-default-port]
+
+other configration options are in the .env.example file
+then run the migration command to generate the tables : db-migrate up
+
+#### 3. In order to access Authenticated routes [tokens-requried]
+
+- 1 # Create a new user and copy the returned token
+- 2 # Add the token to the request headers.Authorization
+
+#### 4. Testing
+
+- In the .env file change the EVN variable value to **test** , to run tests
+  `npm run test`
