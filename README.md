@@ -62,5 +62,9 @@ Before submitting your project, spin it up and test each endpoint. If each one r
 - Dataabase setup
   create 2 databases with the following name store_api_dev and store_api_test other configration options are in the .env.example file
   then run the migration command to generate the tables : db-migrate up
+
+- In order to access Authenticated routes [tokens-requried]
+  - 1 # Create a new user and copy the returned token
+  - 2 # Add the token to the request headers.Authorization
 - Testing
   - change the EVN environment in the .env.example file variable to run tests : npm run test
