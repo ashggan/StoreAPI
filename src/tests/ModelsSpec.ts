@@ -101,7 +101,4 @@ describe("Order Model testing", () => {
     const orders = await order_store.index();
     expect(orders).toEqual([]);
   });
-  // add product to cart
-  // create an order by adding product to cart
-  // list of pro
 });
