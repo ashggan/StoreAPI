@@ -1,0 +1,11 @@
+POSTGRES_DB=store_api_dev
+POSTGRES_DB_TEST=store_api_test
+POSTGRES_DB_USER=admin
+POSTGRES_DB_HOST=127.0.0.1
+POSTGRES_DB_PASSOWROD=superSecrt
+
+ENV=dev
+
+SALT_ROUNDS=15
+BCRYPT_PASSWORD=be-the-change 
+JWT_SECRET=begood

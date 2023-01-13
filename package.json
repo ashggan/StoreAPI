@@ -1,0 +1,47 @@
+{
+  "name": "project-store-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server.ts",
+    "tsc": "npx tsc -w",
+    "jasmine": "jasmine",
+    "jasmine-ts": "ts-node node_modules/jasmine/bin/jasmine",
+    "test": " db-migrate -e test up && ts-node node_modules/jasmine/bin/jasmine &&  db-migrate -e test reset"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ashggan/StoreAPI.git"
+  },
+  "author": "Ashgan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashggan/StoreAPI/issues"
+  },
+  "homepage": "https://github.com/ashggan/StoreAPI#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.1",
+    "db-migrate": "^0.11.13",
+    "db-migrate-pg": "^1.2.2",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-validator": "^6.14.2",
+    "jsonwebtoken": "^9.0.0",
+    "pg": "^8.8.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.15",
+    "@types/jasmine": "^4.3.1",
+    "@types/jsonwebtoken": "^9.0.0",
+    "@types/pg": "^8.6.6",
+    "@types/supertest": "^2.0.12",
+    "jasmine": "^4.5.0",
+    "jasmine-spec-reporter": "^7.0.0",
+    "jasmine-ts": "^0.4.0",
+    "supertest": "^6.3.3"
+  }
+}

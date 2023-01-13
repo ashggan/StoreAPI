@@ -1,0 +1,16 @@
+{
+    "dev": {
+        "driver": "pg",
+        "user": "postgres",
+        "password": "lsjf]m",
+        "host": "127.0.0.1",
+        "database": "store_api_dev"
+    },
+    "test": {
+        "driver": "pg",
+        "user": "postgres",
+        "password": "lsjf]m",
+        "host": "127.0.0.1",
+        "database": "store_api_test"
+    }
+}
