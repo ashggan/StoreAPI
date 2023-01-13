@@ -56,14 +56,11 @@ Before submitting, make sure that your project is complete with a `README.md`. Y
 
 Before submitting your project, spin it up and test each endpoint. If each one responds with data that matches the data shapes from the `REQUIREMENTS.md`, it is ready for submission!
 
-## 6. install and setup
+### 6. install and setup
 
-- Install dependencies and run the server
-  npm install && npm run dev
+- Install dependencies and run the server : npm install && npm run dev
 - Dataabase setup
-  create 2 databases with the following name store_api_dev and store_api_test other configration options are in the .env file
-  then run the migration command to generate the tables
-  db-migrate up
+  create 2 databases with the following name store_api_dev and store_api_test other configration options are in the .env.example file
+  then run the migration command to generate the tables : db-migrate up
 - Testing
-  - change the EVN environment variable to run tests
-    npm run test
+  - change the EVN environment in the .env.example file variable to run tests : npm run test
